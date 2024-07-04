@@ -1,0 +1,16 @@
+.agenda-v2 {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
+.agenda-v2--sidebar {
+  background: var(--light);
+  height: 100vh;
+  min-height: 200px;
+  overflow: auto;
+  position: sticky;
+  top: 1%;
+}
+.agenda-v2--main {
+  flex-basis: 100%;
+}
