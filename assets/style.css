@@ -1,7 +1,9 @@
+:root {
+  --width-position: 75vw;
+}
+
 .agenda-v2 {
-  display: flex;
   gap: 1em;
-  justify-content: space-between;
 }
 .agenda-v2--sidebar {
   background: var(--light);
@@ -13,4 +15,51 @@
 }
 .agenda-v2--main {
   flex-basis: 100%;
+}
+
+/* Sidebar Alt Styling */
+
+.agenda-v2--sidebar-alt {
+  /* display: none; */
+  transition: all 0.3s;
+  transform: translateX(100%);
+}
+
+.agenda-v2--sidebar-alt.active {
+  background: var(--light);
+  height: 100vh;
+  width: var(--width-position);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+  transform: translateX(0%);
+}
+
+button#sidebarCollapse {
+  position: fixed;
+  right: 0.05em;
+  top: 1em;
+  transition: all 0.3s;
+}
+button#sidebarCollapse.collapsed {
+  right: var(--width-position);
+}
+
+@media (min-width: 768px) {
+  .agenda-v2--sidebar-alt,
+  .agenda-v2--sidebar-alt.active {
+    background: var(--light);
+    display: flex;
+    position: sticky;
+    top: 1%;
+    height: 100vh;
+    flex-basis: 50%;
+    transform: inherit;
+  }
+
+  button#sidebarCollapse {
+    display: none;
+  }
 }
