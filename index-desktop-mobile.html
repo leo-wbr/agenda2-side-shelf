@@ -19,7 +19,7 @@
   </head>
   <body>
     <!--  -->
-    <div class="container-fluid d-md-flex justify-content-between agenda-v2">
+    <div class="container-fluid d-flex justify-content-between agenda-v2-alt">
       <div class="agenda-v2--main">
         <div class="row">
           <div class="col-md-12">
@@ -7840,109 +7840,116 @@
           </div>
         </div>
       </div>
-      <button type="button" id="sidebarCollapse" class="btn btn-info btn-sm">
-        <i class="fas fa-filter"></i>
-      </button>
-      <div class="agenda-v2--sidebar-alt rounded px-4 py-2 border shadow-sm">
-        <nav class="flex-grow-1">
-          <div class="sidebar-header">
-            <h4 class="text-dark">Search and Filter</h4>
-          </div>
-          <ul class="list-unstyled d-flex flex-wrap justify-content-around">
-            <li><span class="badge badge-primary">Topic : OmniChannel </span></li>
-            <li><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
-            <li><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
-            <li><span class="badge badge-success">Format : Roundtable </span></li>
-            <li><span class="badge badge-success">Format : Panel</span></li>
-            <li><span class="badge badge-danger">Test : Party Time</span></li>
-          </ul>
-          <ul class="list-unstyled">
-            <h6><strong>View Options</strong></h6>
-            <i class="fas h5 fa-th" data-toggle="tooltip" title="Display Sessions as Grid"></i>
-            <i class="fas h5 fa-expand-arrows-alt" data-toggle="tooltip" title="Expand All Sessions"></i>
-            <i class="fas h5 fa-expand" data-toggle="tooltip" title="Enter Fullscreen"></i>
-          </ul>
-          <hr />
-          <select class="form-control form-control-sm">
-            <option>All Days</option>
-            <option>The Customer Acquisition Summit</option>
-            <option>The Customer Retention Summit</option>
-            <option>Pre-Conference Summit: The Next Generation eCommerce Summit</option>
-            <option>Main Day One</option>
-            <option>Main Day Two Main</option>
-            <option>Day Three - Retail Disruption And The Future Of eCommerce</option>
-          </select>
-          <hr />
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <div class="agenda-v2--sidebar-desktop-mobile rounded px-4 py-2 border shadow-sm">
+        <div class="row p-0 m-0 position-absolute mt-5">
+          <button type="button" id="sidebarCollapse-desktop-mobile" class="btn btn-info btn-md">
+            <i class="fas fa-filter"></i><span class="px-1">Filter/Search</span>
+          </button>
+        </div>
+        <div class="row overflow-auto h-100">
+          <nav class="">
+            <div class="sidebar-header">
+              <h4 class="text-dark">Search and Filter</h4>
             </div>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="basic-addon1" />
-          </div>
-          <hr />
-          <div class="my-3">
-            <h6><strong>Topic</strong></h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-              <label class="form-check-label" for="defaultCheck1">OmniChannel</label>
+
+            <h6><strong>Active Filters and Search</strong></h6>
+
+            <ul class="list-unstyled d-flex flex-wrap justify-content-start">
+              <li class="m-1"><span class="badge badge-primary">Topic : OmniChannel </span></li>
+              <li class="m-1"><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
+              <li class="m-1"><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
+              <li class="m-1"><span class="badge badge-success">Format : Roundtable </span></li>
+              <li class="m-1"><span class="badge badge-success">Format : Panel</span></li>
+              <li class="m-1"><span class="badge badge-danger">Test : Party Time</span></li>
+            </ul>
+            <ul class="list-unstyled">
+              <h6><strong>View Options</strong></h6>
+              <i class="fas h5 fa-th" data-toggle="tooltip" title="Display Sessions as Grid"></i>
+              <i class="fas h5 fa-expand-arrows-alt" data-toggle="tooltip" title="Expand All Sessions"></i>
+              <i class="fas h5 fa-expand" data-toggle="tooltip" title="Enter Fullscreen"></i>
+            </ul>
+            <hr />
+            <select class="form-control form-control-sm">
+              <option>All Days</option>
+              <option>The Customer Acquisition Summit</option>
+              <option>The Customer Retention Summit</option>
+              <option>Pre-Conference Summit: The Next Generation eCommerce Summit</option>
+              <option>Main Day One</option>
+              <option>Main Day Two Main</option>
+              <option>Day Three - Retail Disruption And The Future Of eCommerce</option>
+            </select>
+            <hr />
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon1" />
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
-              <label class="form-check-label" for="defaultCheck2">Customer Acquisition</label>
+            <hr />
+            <div class="my-3">
+              <h6><strong>Topic</strong></h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label class="form-check-label" for="defaultCheck1">OmniChannel</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                <label class="form-check-label" for="defaultCheck2">Customer Acquisition</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
+                <label class="form-check-label" for="defaultCheck3">C-Suite Retreat</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
+                <label class="form-check-label" for="defaultCheck4">Data &amp; Analytics </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
+                <label class="form-check-label" for="defaultCheck5">Marketing, Branding, Content Strategy</label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
-              <label class="form-check-label" for="defaultCheck3">C-Suite Retreat</label>
+            <div class="my-3">
+              <h6><strong>Format</strong></h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label class="form-check-label" for="defaultCheck1">Roundtable</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                <label class="form-check-label" for="defaultCheck2">Panel</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
+                <label class="form-check-label" for="defaultCheck3">Invite Only</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
+                <label class="form-check-label" for="defaultCheck4">Keynote</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
+                <label class="form-check-label" for="defaultCheck5">Presentation</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
+                <label class="form-check-label" for="defaultCheck5">Break</label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
-              <label class="form-check-label" for="defaultCheck4">Data &amp; Analytics </label>
+            <div class="my-3">
+              <h6><strong>Test</strong></h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label class="form-check-label" for="defaultCheck1">Party Time</label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
-              <label class="form-check-label" for="defaultCheck5">Marketing, Branding, Content Strategy</label>
-            </div>
-          </div>
-          <div class="my-3">
-            <h6><strong>Format</strong></h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-              <label class="form-check-label" for="defaultCheck1">Roundtable</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
-              <label class="form-check-label" for="defaultCheck2">Panel</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
-              <label class="form-check-label" for="defaultCheck3">Invite Only</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
-              <label class="form-check-label" for="defaultCheck4">Keynote</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
-              <label class="form-check-label" for="defaultCheck5">Presentation</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
-              <label class="form-check-label" for="defaultCheck5">Break</label>
-            </div>
-          </div>
-          <div class="my-3">
-            <h6><strong>Test</strong></h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-              <label class="form-check-label" for="defaultCheck1">Party Time</label>
-            </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </div>
     <!-- JS Scripts -->
