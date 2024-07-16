@@ -15,7 +15,7 @@
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style-desktop-mobile.css" />
   </head>
   <body>
     <!--  -->
@@ -7842,8 +7842,11 @@
       </div>
       <div class="agenda-v2--sidebar-desktop-mobile rounded px-4 py-2 border shadow-sm">
         <div class="row p-0 m-0 position-absolute mt-5">
-          <button type="button" id="sidebarCollapse-desktop-mobile" class="btn btn-info btn-md">
-            <i class="fas fa-filter"></i><span class="px-1">Filter/Search</span>
+          <button
+            type="button"
+            id="sidebarCollapse-desktop-mobile"
+            class="btn btn-info btn-md btn-collapse-desktop-mobile">
+            <i class="fas fa-filter"></i><span class="px-1"> Filter/Search</span>
           </button>
         </div>
         <div class="row overflow-auto h-100">
@@ -7855,18 +7858,55 @@
             <h6><strong>Active Filters and Search</strong></h6>
 
             <ul class="list-unstyled d-flex flex-wrap justify-content-start">
-              <li class="m-1"><span class="badge badge-primary">Topic : OmniChannel </span></li>
-              <li class="m-1"><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
-              <li class="m-1"><span class="badge badge-primary">Topic : Customer Acquisition </span></li>
-              <li class="m-1"><span class="badge badge-success">Format : Roundtable </span></li>
-              <li class="m-1"><span class="badge badge-success">Format : Panel</span></li>
-              <li class="m-1"><span class="badge badge-danger">Test : Party Time</span></li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-primary"
+                  >Topic : OmniChannel <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-primary"
+                  >Topic : Customer Acquisition <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-primary"
+                  >Topic : Customer Acquisition <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-success"
+                  >Format : Roundtable <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-success"
+                  >Format : Panel <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <span class="badge badge-pill badge-danger"
+                  >Test : Party Time <i class="fas fa-times cursor ml-1"></i
+                ></span>
+              </li>
+              <li class="m-1">
+                <a href=""><span class="small text-muted">Clear All...</span></a>
+              </li>
             </ul>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled d-flex flex-column">
               <h6><strong>View Options</strong></h6>
-              <i class="fas h5 fa-th" data-toggle="tooltip" title="Display Sessions as Grid"></i>
-              <i class="fas h5 fa-expand-arrows-alt" data-toggle="tooltip" title="Expand All Sessions"></i>
-              <i class="fas h5 fa-expand" data-toggle="tooltip" title="Enter Fullscreen"></i>
+              <span class="d-flex align-items-center">
+                <i class="fas h5 fa-th mb-0 mr-1" data-toggle="tooltip" title="Display Sessions as Grid"></i> Display
+                Sessions as Grid
+              </span>
+
+              <span class="d-flex align-items-center"
+                ><i class="fas h5 fa-expand-arrows-alt mb-0 mr-1" data-toggle="tooltip" title="Expand All Sessions"></i>
+                Expand All Sessions</span
+              >
+              <span class="d-flex align-items-center"
+                ><i class="fas h5 fa-expand mb-0 mr-1" data-toggle="tooltip" title="Enter Fullscreen"></i> Enter
+                Fullscreen</span
+              >
             </ul>
             <hr />
             <select class="form-control form-control-sm">

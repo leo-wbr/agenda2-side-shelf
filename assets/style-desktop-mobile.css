@@ -1,0 +1,40 @@
+/* Sidebar Desktop & Mobile Styling */
+
+#sidebarCollapse-desktop-mobile {
+  transform: rotate(270deg);
+  margin-left: -7.15rem;
+}
+
+.agenda-v2--main {
+  padding-right: 1.5em;
+  flex: 1 0 103%;
+}
+
+.agenda-v2--sidebar-desktop-mobile {
+  position: sticky;
+  height: 100vh;
+  min-height: 200px;
+  top: 1%;
+  background: var(--light);
+}
+
+.agenda-v2-alt.collapsed .agenda-v2--sidebar-desktop-mobile {
+  flex-basis: 90%;
+}
+
+.agenda-v2-alt.collapsed .agenda-v2--main {
+  flex: 1 0 auto;
+  width: 0%;
+}
+
+@media (min-width: 768px) {
+  .agenda-v2--main {
+    flex: 1 0 auto;
+    width: 60%;
+    padding-right: 2.5em;
+  }
+
+  .agenda-v2-alt.collapsed .agenda-v2--main {
+    flex-basis: 101%;
+  }
+}
