@@ -43,3 +43,45 @@
 .btn:not(.collapsed) .fa-caret-right {
   transform: rotate(90deg);
 }
+
+/* Filter Section Code */
+
+[class*='filter-'] input:checked,
+[class*='filter-'] input:checked + .form-check-label {
+  accent-color: var(--fg, var(--primary));
+  color: var(--fg, var(--primary));
+  font-weight: 600;
+}
+
+[class*='filter-'] .form-check-label {
+  display: flex;
+  align-items: center;
+}
+[class*='filter-'] .form-check-label span {
+  display: block;
+  margin-right: 0.25em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--fg, var(--primary));
+}
+
+[class*='filter-'] input + .form-check-label {
+  transition: all 0.1s ease-in-out;
+}
+
+.filter-topic input + .form-check-label span,
+.filter-topic input:checked,
+.filter-topic input:checked + .form-check-label {
+  --fg: var(--success);
+}
+.filter-format input + .form-check-label span,
+.filter-format input:checked,
+.filter-format input:checked + .form-check-label {
+  --fg: var(--info);
+}
+.filter-test input + .form-check-label span,
+.filter-test input:checked,
+.filter-test input:checked + .form-check-label {
+  --fg: var(--danger);
+}
