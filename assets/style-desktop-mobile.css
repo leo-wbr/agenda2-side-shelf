@@ -46,6 +46,15 @@
 
 /* Filter Section Code */
 
+[class*='filter-'] .form-check-label {
+  display: flex;
+  align-items: center;
+}
+
+[class*='filter-'] > button {
+  color: var(--fg, var(--primary));
+}
+
 [class*='filter-'] input:checked,
 [class*='filter-'] input:checked + .form-check-label {
   accent-color: var(--fg, var(--primary));
@@ -53,10 +62,6 @@
   font-weight: 600;
 }
 
-[class*='filter-'] .form-check-label {
-  display: flex;
-  align-items: center;
-}
 [class*='filter-'] .form-check-label span {
   display: block;
   margin-right: 0.25em;
@@ -70,18 +75,22 @@
   transition: all 0.1s ease-in-out;
 }
 
+.filter-topic > button,
 .filter-topic input + .form-check-label span,
 .filter-topic input:checked,
 .filter-topic input:checked + .form-check-label {
-  --fg: var(--success);
+  --fg: var(--cyan);
 }
+.filter-format > button,
 .filter-format input + .form-check-label span,
 .filter-format input:checked,
 .filter-format input:checked + .form-check-label {
-  --fg: var(--info);
+  --fg: var(--red);
 }
+
+.filter-test > button,
 .filter-test input + .form-check-label span,
 .filter-test input:checked,
 .filter-test input:checked + .form-check-label {
-  --fg: var(--danger);
+  --fg: var(--orange);
 }
