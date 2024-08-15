@@ -19,7 +19,7 @@
   </head>
   <body>
     <!--  -->
-    <div class="container-fluid d-flex justify-content-between agenda-v2-alt">
+    <div class="container-fluid d-flex justify-content-between agenda-v2 position-relative">
       <div class="agenda-v2--main">
         <div class="row">
           <div class="col-md-12">
@@ -7840,16 +7840,13 @@
           </div>
         </div>
       </div>
-      <div class="agenda-v2--sidebar-desktop-mobile rounded px-4 py-2 border shadow-sm">
-        <div class="row p-0 m-0 position-absolute mt-5">
-          <button
-            type="button"
-            id="sidebarCollapse-desktop-mobile"
-            class="btn btn-info btn-md btn-collapse-desktop-mobile">
+      <div class="agenda-v2--sidebar rounded border shadow-sm">
+        <div class="row position-absolute mt-5">
+          <button type="button" id="btn-collapse-filter" class="btn btn-info btn-md btn-collapse-filter">
             <i class="fas fa-filter"></i>
           </button>
         </div>
-        <div class="row overflow-auto h-100">
+        <div class="row overflow-auto h-100 px-4 py-2">
           <nav class="w-100">
             <div class="sidebar-header">
               <h4 class="text-dark">Search and Filter</h4>
@@ -7932,7 +7929,7 @@
               <option>Day Three - Retail Disruption And The Future Of eCommerce</option>
             </select> -->
 
-            <div>
+            <div class="filter-days">
               <button
                 class="btn btn-sm px-0 pt-0 pb-1"
                 type="button"
@@ -7946,7 +7943,7 @@
               <div class="collapse show" id="collapseExample">
                 <div class="card card-body py-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <input class="form-check-input" checked type="checkbox" value="" id="defaultCheck1" />
                     <label class="form-check-label" for="defaultCheck1">All Days</label>
                   </div>
                   <div class="form-check">

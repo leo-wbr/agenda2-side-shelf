@@ -1,67 +1,66 @@
 /* Sidebar Desktop & Mobile Styling */
-
-#sidebarCollapse-desktop-mobile {
-  margin-left: -4.15rem;
+.btn-collapse-filter {
+  margin-left: -1.82rem;
 }
-
-.agenda-v2--main {
-  padding-right: 1.5em;
-  flex: 1 0 103%;
+.agenda-v2 {
+  gap: 1em;
+  overflow: visible;
 }
-
-.agenda-v2--sidebar-desktop-mobile {
+.agenda-v2.collapsed {
+  overflow: hidden;
+}
+.agenda-v2--sidebar {
+  background: var(--light);
   position: sticky;
   height: 100vh;
   min-height: 200px;
-  top: 0%;
+  top: 0;
   background: var(--light);
 }
 
-.agenda-v2-alt.collapsed .agenda-v2--sidebar-desktop-mobile {
-  flex-basis: 90%;
-}
-
-.agenda-v2-alt.collapsed .agenda-v2--main {
+.agenda-v2 .agenda-v2--main,
+.agenda-v2.collapsed .agenda-v2--main {
   flex: 1 0 auto;
+  transition: all 0.25s ease-in-out;
+}
+.agenda-v2.collapsed .agenda-v2--main {
+  width: 100%;
+}
+.agenda-v2 .agenda-v2--main {
   width: 0%;
 }
 
-@media (min-width: 768px) {
-  .agenda-v2--main {
-    flex: 1 0 auto;
-    width: 60%;
-    padding-right: 2.5em;
-  }
+.agenda-v2 .agenda-v2--sidebar {
+  width: 92%;
+  z-index: 1;
+}
 
-  .agenda-v2-alt.collapsed .agenda-v2--main {
-    flex-basis: 101%;
+@media (min-width: 768px) {
+  .agenda-v2 .agenda-v2--sidebar {
+    width: 100%;
+    max-width: 300px;
   }
 }
-.btn .fa-caret-right {
+/* Filter Section Code */
+[class*='filter-'] [class*='form-check-'] {
+  cursor: pointer;
+  max-width: 15ch;
+}
+[class*='filter-'] .btn .fa-caret-right {
   transition: all 0.2s ease-in-out;
 }
-.btn:not(.collapsed) .fa-caret-right {
+[class*='filter-'] .btn:not(.collapsed) .fa-caret-right {
   transform: rotate(90deg);
 }
-
-/* Filter Section Code */
-
-[class*='filter-'] .form-check-label {
-  display: flex;
-  align-items: center;
-}
-
 [class*='filter-'] > button {
   color: var(--fg, var(--primary));
 }
-
 [class*='filter-'] input:checked,
 [class*='filter-'] input:checked + .form-check-label {
   accent-color: var(--fg, var(--primary));
   color: var(--fg, var(--primary));
   font-weight: 600;
 }
-
 [class*='filter-'] .form-check-label span {
   display: block;
   margin-right: 0.25em;
@@ -70,27 +69,15 @@
   border-radius: 50%;
   background-color: var(--fg, var(--primary));
 }
-
 [class*='filter-'] input + .form-check-label {
   transition: all 0.1s ease-in-out;
 }
-
-.filter-topic > button,
-.filter-topic input + .form-check-label span,
-.filter-topic input:checked,
-.filter-topic input:checked + .form-check-label {
+.filter-topic :where(button, input:checked, input:checked + .form-check-label) {
   --fg: var(--cyan);
 }
-.filter-format > button,
-.filter-format input + .form-check-label span,
-.filter-format input:checked,
-.filter-format input:checked + .form-check-label {
+.filter-format :where(button, input:checked, input:checked + .form-check-label) {
   --fg: var(--red);
 }
-
-.filter-test > button,
-.filter-test input + .form-check-label span,
-.filter-test input:checked,
-.filter-test input:checked + .form-check-label {
+.filter-test :where(button, input:checked, input:checked + .form-check-label) {
   --fg: var(--orange);
 }
