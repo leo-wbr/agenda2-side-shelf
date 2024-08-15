@@ -21,7 +21,7 @@
 .agenda-v2 .agenda-v2--main,
 .agenda-v2.collapsed .agenda-v2--main {
   flex: 1 0 auto;
-  transition: all 0.25s ease-in-out;
+  transition: width 0.8s ease-out;
 }
 .agenda-v2.collapsed .agenda-v2--main {
   width: 100%;
