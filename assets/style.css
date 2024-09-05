@@ -1,110 +1,83 @@
-:root {
-  --width-position: 75vw;
+/* Sidebar Desktop & Mobile Styling */
+.btn-collapse-filter {
+  margin-left: -1.82rem;
 }
-
 .agenda-v2 {
   gap: 1em;
+  overflow: visible;
+}
+.agenda-v2.collapsed {
+  overflow: hidden;
 }
 .agenda-v2--sidebar {
   background: var(--light);
+  position: sticky;
   height: 100vh;
   min-height: 200px;
-  overflow: auto;
-  position: sticky;
-  top: 1%;
-}
-.agenda-v2--main {
-  flex-basis: 100%;
-}
-
-/* Sidebar Only Mobile Styling */
-
-.agenda-v2--sidebar-mobile {
-  /* display: none; */
-  transition: all 0.3s;
-  transform: translateX(100%);
-}
-
-.agenda-v2--sidebar-mobile.active {
-  background: var(--light);
-  height: 100vh;
-  width: var(--width-position);
-  overflow: auto;
-  position: fixed;
   top: 0;
-  right: 0;
-  transition: all 0.3s;
-  transform: translateX(0%);
-}
-
-button#sidebarCollapse {
-  position: fixed;
-  right: 0.05em;
-  top: 1em;
-  transition: all 0.3s;
-}
-button#sidebarCollapse.collapsed {
-  right: var(--width-position);
-}
-
-@media (min-width: 768px) {
-  .agenda-v2--sidebar-mobile,
-  .agenda-v2--sidebar-mobile.active {
-    background: var(--light);
-    display: flex;
-    position: sticky;
-    top: 1%;
-    height: 100vh;
-    flex-basis: 50%;
-    transform: inherit;
-  }
-
-  button#sidebarCollapse {
-    display: none;
-  }
-}
-
-/* Sidebar Desktop & Mobile Styling */
-
-#sidebarCollapse-desktop-mobile {
-  transform: rotate(270deg);
-  margin-left: -7.15rem;
-}
-
-.agenda-v2--main {
-  padding-right: 1.5em;
-  flex: 1 0 103%;
-}
-
-.agenda-v2--sidebar-desktop-mobile {
-  position: sticky;
-  height: 100vh;
-  min-height: 200px;
-  top: 1%;
   background: var(--light);
 }
 
-.agenda-v2-alt.collapsed .agenda-v2--sidebar-desktop-mobile {
-  flex-basis: 100%;
-}
-
-.agenda-v2-alt.collapsed .agenda-v2--main {
+.agenda-v2 .agenda-v2--main,
+.agenda-v2.collapsed .agenda-v2--main {
   flex: 1 0 auto;
+  transition: width 0.8s ease-out;
+}
+.agenda-v2.collapsed .agenda-v2--main {
+  width: 100%;
+}
+.agenda-v2 .agenda-v2--main {
   width: 0%;
 }
 
+.agenda-v2 .agenda-v2--sidebar {
+  width: 92%;
+  z-index: 1;
+}
+
 @media (min-width: 768px) {
-  .agenda-v2--main {
-    flex-basis: 101%;
-    padding-right: 2.5em;
+  .agenda-v2 .agenda-v2--sidebar {
+    width: 100%;
+    max-width: 300px;
   }
-
-  .agenda-v2-alt.collapsed .agenda-v2--main {
-    flex: 1 0 auto;
-    width: 1%;
-  }
-
-  .agenda-v2-alt.collapsed .agenda-v2--sidebar-desktop-mobile {
-    flex-basis: 30%;
-  }
+}
+/* Filter Section Code */
+[class*='filter-'] [class*='form-check-'] {
+  cursor: pointer;
+  max-width: 15ch;
+}
+[class*='filter-'] .btn .fa-caret-right {
+  transition: all 0.2s ease-in-out;
+}
+[class*='filter-'] .btn:not(.collapsed) .fa-caret-right {
+  transform: rotate(90deg);
+}
+[class*='filter-'] > button {
+  color: var(--fg, var(--primary));
+}
+[class*='filter-'] input:checked,
+[class*='filter-'] input:checked + .form-check-label {
+  accent-color: var(--fg, var(--primary));
+  color: var(--fg, var(--primary));
+  font-weight: 600;
+}
+[class*='filter-'] .form-check-label span {
+  display: block;
+  margin-right: 0.25em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--fg, var(--primary));
+}
+[class*='filter-'] input + .form-check-label {
+  transition: all 0.1s ease-in-out;
+}
+.filter-topic :where(button, input:checked, input:checked + .form-check-label) {
+  --fg: var(--cyan);
+}
+.filter-format :where(button, input:checked, input:checked + .form-check-label) {
+  --fg: var(--red);
+}
+.filter-test :where(button, input:checked, input:checked + .form-check-label) {
+  --fg: var(--orange);
 }
