@@ -1,3 +1,7 @@
+body {
+  overflow-x: visible !important;
+}
+
 /* Sidebar Desktop & Mobile Styling */
 .btn-collapse-filter {
   margin-left: -1.82rem;
